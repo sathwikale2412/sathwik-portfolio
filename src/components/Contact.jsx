@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Github, Copy, Check, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Github, Copy, Check, Send, Sparkles } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
+import TiltCard from './TiltCard';
 
 export default function Contact() {
   const [copied, setCopied] = useState(false);
@@ -14,53 +15,58 @@ export default function Contact() {
   return (
     <section id="contact" className="section">
       <div className="container">
-        <div className="contact-card">
-          <span className="section-tag">// Get In Touch</span>
-          <h2 className="section-title" style={{ marginTop: '0.5rem' }}>
-            Let's Build Something Exceptional
-          </h2>
-          <p className="section-desc" style={{ maxWidth: '580px', marginTop: '0.75rem' }}>
-            Whether you are looking to hire a full-stack engineer, collaborate on a secure open-source system, or discuss architecture challenges, my inbox is always open.
-          </p>
+        <TiltCard className="contact-card-wrapper" maxTilt={6}>
+          <div className="contact-card">
+            <div className="terminal-pill">
+              <span className="pill-dot"></span>
+              <span>// DISPATCH_COMMUNICATION</span>
+            </div>
+            <h2 className="contact-headline">Initialize Direct Connection</h2>
+            <p className="contact-subtext">
+              Looking for a disciplined full-stack engineer who builds with rigorous fail-closed security and architectural precision? Let's connect.
+            </p>
 
-          <div className="contact-channels">
-            <a href={`mailto:${personalInfo.email}`} className="contact-pill">
-              <Mail size={16} color="var(--cyan)" />
-              <span>{personalInfo.email}</span>
-            </a>
+            {/* Verification Pills */}
+            <div className="contact-channels">
+              <a href={`mailto:${personalInfo.email}`} className="contact-pill">
+                <Mail size={16} color="var(--mint)" />
+                <span className="contact-pill-val">{personalInfo.email}</span>
+              </a>
 
-            <a href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`} className="contact-pill">
-              <Phone size={16} color="var(--emerald)" />
-              <span>{personalInfo.phone}</span>
-            </a>
+              <a href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`} className="contact-pill">
+                <Phone size={16} color="var(--teal)" />
+                <span className="contact-pill-val">{personalInfo.phone}</span>
+              </a>
 
-            <div className="contact-pill" style={{ cursor: 'default' }}>
-              <MapPin size={16} color="var(--amber)" />
-              <span>{personalInfo.location}</span>
+              <div className="contact-pill cursor-default">
+                <MapPin size={16} color="var(--amber)" />
+                <span className="contact-pill-val">{personalInfo.location}</span>
+              </div>
+
+              <a
+                href={personalInfo.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="contact-pill"
+              >
+                <Github size={16} color="var(--amethyst)" />
+                <span className="contact-pill-val">github.com/{personalInfo.handle}</span>
+              </a>
             </div>
 
-            <a
-              href={personalInfo.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-pill"
-            >
-              <Github size={16} color="var(--purple)" />
-              <span>github.com/{personalInfo.handle}</span>
-            </a>
+            {/* Quick Actions */}
+            <div className="contact-actions-row">
+              <a href={`mailto:${personalInfo.email}`} className="btn-primary">
+                <Send size={15} />
+                <span>Send Direct Email</span>
+              </a>
+              <button onClick={handleCopyEmail} className="btn-secondary">
+                {copied ? <Check size={15} color="var(--mint)" /> : <Copy size={15} />}
+                <span>{copied ? 'Copied to Clipboard!' : 'Copy Email Address'}</span>
+              </button>
+            </div>
           </div>
-
-          <div style={{ display: 'flex', justifyContent: 'center', gap: '0.75rem', flexWrap: 'wrap' }}>
-            <a href={`mailto:${personalInfo.email}`} className="btn-primary">
-              <Send size={15} />
-              <span>Send Email Directly</span>
-            </a>
-            <button onClick={handleCopyEmail} className="btn-secondary">
-              {copied ? <Check size={15} color="var(--emerald)" /> : <Copy size={15} />}
-              <span>{copied ? 'Copied to Clipboard!' : 'Copy Email Address'}</span>
-            </button>
-          </div>
-        </div>
+        </TiltCard>
       </div>
     </section>
   );
