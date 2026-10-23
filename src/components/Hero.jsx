@@ -1,9 +1,10 @@
 import React from 'react';
-import { ArrowRight, Github, Mail, ShieldCheck, Cpu, Terminal, Sparkles } from 'lucide-react';
+import { ArrowRight, Github, Mail, Cpu, Terminal, Sparkles, Compass } from 'lucide-react';
 import { personalInfo } from '../data/portfolioData';
-import ThreeCanvas from './ThreeCanvas';
+import ThreeGalaxyNavigator from './ThreeGalaxyNavigator';
+import { playClickSound } from '../utils/audio';
 
-export default function Hero() {
+export default function Hero({ onSelectProject }) {
   return (
     <section className="hero-section">
       <div className="container hero-layout">
@@ -22,7 +23,7 @@ export default function Hero() {
               alt="Sathwik Reticle"
               className="hero-logo-badge"
             />
-            <span className="hero-reticle-tag">ENGINEER DOSSIER // NODE: VBIT-CSE-2028</span>
+            <span className="hero-reticle-tag">OPERATIONAL ARCHITECTURE // NODE: VBIT-CSE-2028</span>
           </div>
 
           <h1 className="hero-title">{personalInfo.name}</h1>
@@ -31,17 +32,29 @@ export default function Hero() {
 
           {/* Action CTAs */}
           <div className="hero-buttons">
-            <a href="#projects" className="btn-primary">
-              <span>Inspect Systems</span>
+            <a
+              href="#projects"
+              className="btn-primary"
+              onClick={() => playClickSound()}
+            >
+              <span>Explore 8 Deployed Systems</span>
               <ArrowRight size={16} />
             </a>
-            <a href="#terminal" className="btn-secondary">
-              <Terminal size={16} />
-              <span>Launch Terminal CLI</span>
+            <a
+              href="#benchmark"
+              className="btn-secondary"
+              onClick={() => playClickSound()}
+            >
+              <Compass size={16} color="var(--mint)" />
+              <span>Test Reaction Benchmark</span>
             </a>
-            <a href="#education" className="btn-secondary">
-              <Cpu size={16} />
-              <span>Education Log</span>
+            <a
+              href="#terminal"
+              className="btn-secondary"
+              onClick={() => playClickSound()}
+            >
+              <Terminal size={16} />
+              <span>Interactive CLI</span>
             </a>
           </div>
 
@@ -57,7 +70,7 @@ export default function Hero() {
           </div>
         </div>
 
-        {/* Right Column: Interactive 3D Holographic Model */}
+        {/* Right Column: Functional 3D Spatial System Navigator */}
         <div className="hero-3d-col">
           <div className="hero-3d-card">
             <div className="hero-3d-header">
@@ -66,15 +79,16 @@ export default function Hero() {
                 <span className="h-dot"></span>
                 <span className="h-dot"></span>
               </div>
-              <span className="h-title">QUANTUM 3D SIMULATION ENGINE</span>
-              <span className="h-badge">WEBGL // THREE.JS</span>
+              <span className="h-title">3D SPATIAL ORBITAL NAVIGATOR</span>
+              <span className="h-badge">CLICK NODE TO INSPECT</span>
             </div>
 
-            <ThreeCanvas />
+            {/* Functional 3D Galaxy Navigator */}
+            <ThreeGalaxyNavigator onSelectProject={onSelectProject} />
 
             <div className="hero-3d-footer">
               <Sparkles size={13} color="var(--mint)" />
-              <span>Click & Drag or Move Cursor to Manipulate 3D Spatial Vector Field</span>
+              <span>Interactive: Drag to rotate space • Click any glowing project satellite to inspect</span>
             </div>
           </div>
         </div>
