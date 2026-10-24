@@ -7,6 +7,7 @@ export const personalInfo = {
   email: 'sathwikale31@gmail.com',
   phone: '+91 9000848332',
   github: 'https://github.com/sathwikale2412',
+  linkedin: 'https://www.linkedin.com/in/ale-sathwik-41640336a',
   status: 'Available for high-impact software engineering roles & research projects',
   bio: `I am a software engineer focused on architecting resilient, production-grade applications that unify intuitive human interfaces with uncompromising system security. 
 My engineering foundations span full-stack web platforms, client-side zero-knowledge encryption, predictive AI automotive diagnostics, real-time cognitive evaluation engines, and offline-first mobile utilities. 

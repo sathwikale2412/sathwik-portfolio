@@ -106,10 +106,11 @@ STACK    : ${vsrms.techStack.map((t) => `${t.name} (${t.role})`).join('\n       
       case 'contact':
         newHistory.push({
           type: 'response',
-          text: `EMAIL  : ${personalInfo.email}
-PHONE  : ${personalInfo.phone}
-GITHUB : ${personalInfo.github}
-LOC    : ${personalInfo.location}`,
+          text: `EMAIL    : ${personalInfo.email}
+PHONE    : ${personalInfo.phone}
+LINKEDIN : ${personalInfo.linkedin}
+GITHUB   : ${personalInfo.github}
+LOC      : ${personalInfo.location}`,
         });
         break;
 

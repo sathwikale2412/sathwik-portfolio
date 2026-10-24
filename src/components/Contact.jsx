@@ -93,7 +93,7 @@ export default function Contact() {
             {/* Social Buttons: LINKEDIN & GITHUB */}
             <div className="direct-social-row">
               <a
-                href="https://linkedin.com/in/sathwik-ale"
+                href={personalInfo.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="direct-social-btn"
