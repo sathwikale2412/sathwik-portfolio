@@ -97,6 +97,7 @@ export const projects = [
     category: 'Cloud & AI',
     featured: true,
     liveUrl: 'https://vehicle-service-management-pink.vercel.app',
+    videoUrl: 'https://youtu.be/3JnjU8X5BEM',
     githubUrl: 'https://github.com/sathwikale2412/vehicle-service-management',
     description:
       'A comprehensive automotive management platform featuring predictive AI maintenance diagnostics, automated service milestone forecasting, financial expense categorization, and an interactive real-time IST clock.',
@@ -126,6 +127,7 @@ export const projects = [
     category: 'Full Stack',
     featured: true,
     liveUrl: 'https://daytodayactivity-web.vercel.app',
+    videoUrl: 'https://youtu.be/F2g_3UpU2R0',
     githubUrl: 'https://github.com/sathwikale2412/daytodayactivity-web',
     description:
       'Converted from an Android project into a modern cloud web app with multi-device PostgreSQL synchronization via Supabase and an offline IndexedDB guest sandbox.',
@@ -154,6 +156,7 @@ export const projects = [
     category: 'Full Stack',
     featured: true,
     liveUrl: 'https://cadat-railway-psycho-test.vercel.app',
+    videoUrl: 'https://youtu.be/_nSWp2wmZq0',
     githubUrl: 'https://github.com/sathwikale2412/cadat-railway-psycho-test',
     description:
       'A precision cognitive drill and psychomotor assessment application tailored to Indian Railways loco pilot evaluation standards with sub-millisecond reaction timing.',
@@ -181,6 +184,7 @@ export const projects = [
     category: 'Cloud & AI',
     featured: true,
     liveUrl: 'https://argo-scheme-recommender.vercel.app',
+    videoUrl: 'https://youtu.be/jop_KuyKGvs',
     githubUrl: 'https://github.com/sathwikale2412/ARGO_SCHEME_RECOMENDER',
     description:
       'An intelligent eligibility discovery platform matching Indian farmers with state and central agricultural subsidies, loans, and irrigation grants based on landholding and state criteria.',
@@ -208,6 +212,7 @@ export const projects = [
     category: 'Cloud & AI',
     featured: true,
     liveUrl: 'https://studymate-five-eta.vercel.app',
+    videoUrl: 'https://youtu.be/v_jC7ij5zLM',
     githubUrl: 'https://github.com/sathwikale2412/studymate',
     description:
       'A privacy-first document intelligence platform where multi-megabyte lecture PDFs are ingested and queried entirely on-device, bypassing serverless upload size bottlenecks.',
@@ -236,6 +241,7 @@ export const projects = [
     category: 'Security & Systems',
     featured: true,
     liveUrl: 'https://aegiszero-frontend.vercel.app',
+    videoUrl: 'https://youtu.be/RZkWWTrGCeU',
     githubUrl: 'https://github.com/sathwikale2412/aegiszero-frontend',
     description:
       'A security operations console coordinating access reviews, audit logs, and automated incident response webhook dispatch to enterprise Workato endpoints.',

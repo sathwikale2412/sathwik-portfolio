@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ExternalLink, Github, Sparkles, ChevronRight, Info } from 'lucide-react';
+import { ExternalLink, Github, Sparkles, ChevronRight, Info, Play } from 'lucide-react';
 import { projects } from '../data/portfolioData';
 import TiltCard from './TiltCard';
 import { playClickSound, playModalSound } from '../utils/audio';
@@ -103,6 +103,19 @@ export default function Projects({ activeModalProject, setActiveModalProject }) 
                     >
                       <ExternalLink size={13} />
                       <span>Live App</span>
+                    </a>
+                  )}
+                  {project.videoUrl && (
+                    <a
+                      href={project.videoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="card-link card-link-video"
+                      onClick={() => playClickSound()}
+                      title="Watch Project Demonstration Video on YouTube"
+                    >
+                      <Play size={13} fill="currentColor" />
+                      <span>Video Demo</span>
                     </a>
                   )}
                   {project.githubUrl && (

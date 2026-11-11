@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, ExternalLink, Github, Shield, Cpu, Layers, CheckCircle2 } from 'lucide-react';
+import { X, ExternalLink, Github, Shield, Cpu, Layers, CheckCircle2, Play } from 'lucide-react';
 
 export default function ProjectModal({ project, onClose }) {
   if (!project) return null;
@@ -86,6 +86,17 @@ export default function ProjectModal({ project, onClose }) {
 
         {/* Modal Footer */}
         <div className="modal-footer">
+          {project.videoUrl && (
+            <a
+              href={project.videoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-video"
+            >
+              <Play size={15} fill="currentColor" />
+              <span>Watch Video Demo</span>
+            </a>
+          )}
           {project.liveUrl && (
             <a
               href={project.liveUrl}
