@@ -180,7 +180,7 @@ export const projects = [
     subtitle: 'Multi-lingual agricultural scheme matching & subsidy discovery',
     category: 'Cloud & AI',
     featured: true,
-    liveUrl: 'https://argo-scheme-recomender.vercel.app',
+    liveUrl: 'https://argo-scheme-recommender.vercel.app',
     githubUrl: 'https://github.com/sathwikale2412/ARGO_SCHEME_RECOMENDER',
     description:
       'An intelligent eligibility discovery platform matching Indian farmers with state and central agricultural subsidies, loans, and irrigation grants based on landholding and state criteria.',
@@ -207,7 +207,7 @@ export const projects = [
     subtitle: 'In-browser document QA, translation & code-to-flowchart engine',
     category: 'Cloud & AI',
     featured: true,
-    liveUrl: 'https://studymate-web.vercel.app',
+    liveUrl: 'https://studymate-five-eta.vercel.app',
     githubUrl: 'https://github.com/sathwikale2412/studymate',
     description:
       'A privacy-first document intelligence platform where multi-megabyte lecture PDFs are ingested and queried entirely on-device, bypassing serverless upload size bottlenecks.',
